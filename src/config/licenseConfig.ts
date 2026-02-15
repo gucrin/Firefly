@@ -5,6 +5,6 @@ export const licenseConfig: LicenseConfig = {
 	enable: true,
 
 	// 许可证名称及链接
-	name: "CC BY-NC-SA 4.0",
-	url: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+	name: "Copyright © 2026 Gucrin. All Rights Reserved",
+	url: "https://baike.baidu.com/item/All%20Rights%20Reserved/1583079",
 };
