@@ -5,13 +5,8 @@ published: 2026-02-09
 image: >-
   https://raw.githubusercontent.com/gucrin/RyuChan-Pic/main/img/1.5889197846586983E9.jpeg
 draft: false
-tags:
-  - MC
-  - IPv6
-  - 公网
-  - MC 服务器
-categories:
-  - 技术
+tags: [MC, IPv6, 公网, MC 服务器]
+category: 技术
 ---
 大家好我是 Gucrin，这是本博客的第一篇文章，打算写个简单点的先试试水~
 
@@ -28,7 +23,7 @@ categories:
 #### 解决方案
 只需要略微修改服务器的启动脚本即可，这里给大家贴一下我的启动脚本。
 
-```
+```javascript
 @echo off
 
 :: ==========================================
@@ -38,7 +33,7 @@ categories:
 :: ==========================================
 
 
-:: 1. JVM 参数：内存 + GC 优化 + 你需要的 -D 属性（移到这里）
+:: 1. JVM 参数：内存 + GC 优化 + D 属性
 
 set JAVA_OPTS=-Xmx4G -Xms4G ^
 
@@ -60,13 +55,13 @@ set JAVA_OPTS=-Xmx4G -Xms4G ^
 
 
 
-:: 2. 核心文件：确认 jar 名正确（Purpur 1.21.x 通常是 purpur-1.21.x.jar）
+:: 2. 核心文件
 
 set SERVER_JAR=purpur-1.21.11-2560.jar
 
 
 
-:: 3. 服务器参数：只放服务器能认识的选项（nogui 关图形界面）
+:: 3. 服务器参数
 
 set SERVER_ARGS=nogui
 
