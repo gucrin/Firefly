@@ -1,7 +1,7 @@
 ---
 title: MC 服务器启动脚本的编写是如何影响玩家联机的
 description: 解决了玩家无法通过 IPv6 公网访问服务器
-pubDate: 2026-02-09T13:04
+published: 2026-02-09
 image: >-
   https://raw.githubusercontent.com/gucrin/RyuChan-Pic/main/img/1.5889197846586983E9.jpeg
 draft: false
