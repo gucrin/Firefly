@@ -67,7 +67,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		// 主页横幅文字
 		homeText: {
 			// 是否启用主页横幅文字
-			enable: true,
+			enable: false,
 			// 是否允许用户通过控制面板切换横幅标题显示
 			switchable: true,
 			// 主页横幅主标题
@@ -106,18 +106,18 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 				// 移动端显示横幅图片来源文本
 				mobile: true,
 			},
-			text: {
+			//text: {
 				// 桌面端要显示的来源文本
-				desktop: "Pixiv - 晚晚喵",
+				//desktop: "Pixiv - 晚晚喵",
 				// 移动端要显示的来源文本
-				mobile: "Pixiv - KiraraShss",
-			},
-			url: {
+				//mobile: "Pixiv - KiraraShss",
+			//},
+			//url: {
 				// 桌面端原始艺术品或艺术家页面的 URL 链接
-				desktop: "https://www.pixiv.net/users/108801776",
+				//desktop: "https://www.pixiv.net/users/108801776",
 				// 移动端原始艺术品或艺术家页面的 URL 链接
-				mobile: "https://www.pixiv.net/users/42715864",
-			},
+				//mobile: "https://www.pixiv.net/users/42715864",
+			//},
 		},
 		// 横幅导航栏配置
 		navbar: {
