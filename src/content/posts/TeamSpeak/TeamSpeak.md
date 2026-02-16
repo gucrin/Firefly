@@ -1,7 +1,7 @@
 ---
 title: 真的是最好用的语音软件吗 — TeamSpeak 从部署到使用
 description: 带你了解最好用的语音软件
-published: 2026-02-16
+published: 2026-02-15
 image: >-
   https://raw.githubusercontent.com/gucrin/RyuChan-Pic/main/img/1.5889197846586983E9.jpeg
 draft: false
