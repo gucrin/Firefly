@@ -2,7 +2,7 @@
 title: 新年快乐🎉
 description: 这是本博客创建以来过的第一次新年！
 published: 2026-02-17
-image: ./.png
+image: ./asaki.png
 draft: false
 tags:
   - 新年
