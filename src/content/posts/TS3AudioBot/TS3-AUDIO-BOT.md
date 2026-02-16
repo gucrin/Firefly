@@ -139,14 +139,14 @@ Please enter the server password (or leave empty for none):
 ```yml
 version: 1
 playMode: SeqPlay
-neteaseApi: localhost:3000
+neteaseApi: http://localhost:3000
 isPrivateFMMode: false
 isQrlogin: false
 cookieUpdateIntervalMin: 30
 autoPause: true
 ```
 
-前面我们本地部署的 API 运行在 localhost:3000，因此我们就修改为此地址。
+前面我们本地部署的 API 运行在 http://localhost:3000，因此我们就修改为此地址。
 
 # 配置 Bot
 Bot 默认启动在端口 58913 上，使用云服务器的宝子可以用你服务器的公网 IP 访问这个端口即可看到 Web 配置页面~
@@ -228,4 +228,7 @@ Cookie登录:
 即可播放名为 Shelter 的歌曲
 
 # 总结
+
+![点歌成功啦~](./shelter.png)
+
 现在你的点歌机器人可以正常工作啦~ 这次我们使用了两个项目以完成目标，感谢二位项目作者的付出！
