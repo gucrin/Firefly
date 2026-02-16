@@ -73,7 +73,7 @@ pnpm -v
 ### 部署
 新建一个项目文件夹，然后在文件夹里打开 CMD，输入下方命令，开始安装
 
-```Terminal window
+```bash
 npm i NeteaseCloudMusicApi
 ```
 
@@ -85,7 +85,7 @@ npx NeteaseCloudMusicApi
 
 运行一下 bat 文件，正常情况下应该可以看到如下输出：
 
-```Terminal window
+```bash
 Services starts at localhost:3000
 ```
 
@@ -98,11 +98,72 @@ Services starts at localhost:3000
 
 ::github{repo="ZHANGTIANYAO1/TS3AudioBot-NetEaseCloudmusic-plugin"}
 
-点击项目卡片跳转到仓库页面，然后在 releases 页面按照说明下载对应文件，本文使用3.0.2测试版 - TS3AudioBot_WIN_64.zip 作为演示。
+点击项目卡片跳转到仓库页面，然后在 releases 页面按照说明下载对应文件，本文使用 3.0.2测试版 - TS3AudioBot_WIN_64.zip 作为演示。
 
-### 添加环境变量
+解压文件，然后运行 TS3AudioBot.exe
 
-要让 Bot 能够正常解析音频，还需为它添加 FFmpeg 的环境变量。
+```bash
+INFO|Core| [============ TS3AudioBot started =============]
+INFO|Core| [ Date: Monday, 16 February 2026 09:31:44
+INFO|Core| [ Version: 0.12.2/master/4c6be036
+INFO|Core| [ Build: Release
+INFO|Core| [ Platform: Windows 6.2.9200.0 (64bit)
+INFO|Core| [ Runtime: .NET Framework 3.1.32 ServerGC:True GC:SustainedLowLatency
+INFO|Core| [ Opus: libopus 1.2.1-fixed (x64)
+INFO|Core| [==============================================]
+INFO|Core| Starting Webserver on port 58913
+It seems like there are no bots configured.
+Fill out this quick setup to get started.
+Please enter the ip, domain or nickname (with port; default: 9987) where to connect to:
+```
 
-前往 [FFmpeg官网](https://www.ffmpeg.org/download.html) 下载
-打开 Windows 设置 ＞ 系统 ＞ 关于此电脑 ＞ 高级系统设置 ＞ 环境变量
+这里是让我们输入 TeamSpeak 服务器的 IP 地址，也支持域名以及昵称，默认连接 9987 端口，输入好之后回车
+
+```bash
+Please enter the server password (or leave empty for none):
+```
+
+这里是填写 TeamSpeak 服务器密码，没设置的直接回车即可，设置了的输入好之后回车
+
+```bash
+09:37:58.7697| INFO|Core| Bot "default" connecting to "localhost:9987"
+09:37:59.2042| INFO|Core| Client connected.
+```
+
+看到如上输入就代表着 Bot 已经加入你的服务器了🎉
+
+###接入网易云 API 
+
+打开 Bot 文件夹，找到 plugins 文件夹，修改 neteaseApi 参数
+
+```yml
+version: 1
+playMode: SeqPlay
+neteaseApi: localhost:3000
+isPrivateFMMode: false
+isQrlogin: false
+cookieUpdateIntervalMin: 30
+autoPause: true
+```
+
+前面我们本地部署的 API 运行在 localhost:3000，因此我们就修改为此地址。
+
+###配置 Bot
+Bot 默认启动在端口 58913 上，使用云服务器的宝子可以用你服务器的公网 IP 访问这个端口即可看到 Web 配置页面~
+
+
+如图所示我们需要填写 Client UID，获取它的方式也很简单，打开 TeamSpeak 客户端，连接到你的服务器，找到刚刚加入频道的 Bot 并发起文字聊天，输入下方指令：
+
+```bash
+!api token
+```
+
+然后机器人就会返回一个 Client UID，将这个 UID 填入即可开始配置 Bot 了。
+
+点击 Jump to your Bots overview，然后点击空白图标 :spoiler[其实是设置]，在 Server 选项卡里可以修改 Bot 所在频道以及名称。
+
+Settings 选项卡可以修改服务器地址 密码 频道密码以及机器人音量。
+
+Playlist 选项卡可以播放本地音乐，如图所示 File Name 处只要填写音频文件的绝对路径即可~
+
+例如：C:\Users\Gucrin\Music\NURTURE MEGAMIX.mp3
